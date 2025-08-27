@@ -36,8 +36,9 @@ const VerificationStep: React.FC<VerificationStepProps> = ({ uploadedFile, onVer
       setMessage('Mempersiapkan gambar untuk dianalisis...');
       
       try {
-        // Fix: Use environment variable for API key as per guidelines to resolve comparison error.
-        const apiKey = process.env.API_KEY;
+        // WARNING: API Key is hardcoded for client-side functionality as requested.
+        // This is not a secure practice for production applications.
+        const apiKey = "AIzaSyDHYnj-E0V0h16thBf_-mycv4OnaKRxfgM";
 
         if (!apiKey) {
           setStatus(VerificationStatus.FAILED);
